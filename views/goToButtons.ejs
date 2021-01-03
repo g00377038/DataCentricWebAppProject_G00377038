@@ -1,0 +1,59 @@
+<style>
+    .content {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+
+    th,
+    td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        padding: 16px 32px;
+    }
+</style>
+
+<body>
+
+    <div class="content">
+        <h1>G00377038 DCWA Project</h1>
+        <h2>Home Page</h2>
+        <br>
+
+        <table>
+
+            <tr>
+                <td>
+                    <!-- List Cities button -->
+                    <form action="http://localhost:3000/ListCities">
+                        <input type="submit" value="List Cities" />
+                    </form>
+                </td>
+                <td>
+                    <!-- List Countries button -->
+                    <form action="http://localhost:3000/ListCountries">
+                        <input type="submit" value="List Countries" />
+                    </form>
+                </td>
+                <td>
+                    <!-- List Heads of State button -->
+                    <form action="http://localhost:3000/ListHeadsOfState">
+                        <input type="submit" value="List Heads of State" />
+                    </form>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>

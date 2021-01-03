@@ -1,0 +1,69 @@
+<style>
+    .content {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+
+    th,
+    td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        padding: 16px 32px;
+    }
+</style>
+
+<body>
+
+    <div class="content">
+        <h2>List Countries Page</h2>
+        <br>
+
+        <!-- create table -->
+        <table>
+            <tr>
+                <th>Country Code</th>
+                <th>Country Name</th>
+                <th>Country Details</th>
+            </tr>
+            <% countries.forEach((country) => { %>
+                <tr>
+                    <td> <%= country.co_code %> </td>
+                    <td> <%= country.co_name %> </td>
+                    <td> <%= country.co_details %> </td>
+                    <!-- submit button -->
+                    <td> <form action="http://localhost:3000/EditCountry">
+                        <input type="submit" value="Update" />
+                    </form> </td>
+                    <!-- Delete button -->
+                    <td> <form action=<%= "http://localhost:3000/countries/" +country.co_code %> >
+                        <input type="submit" value="Delete" />
+                    </form> </td>
+                </tr>
+            <% }) %>
+        </table>
+
+        <br><br>
+
+        <!-- Add Country button -->
+        <form action="http://localhost:3000/addCountry">
+            <input type="submit" value="Add New Country" />
+        </form>
+
+        <!-- home button -->
+        <form action="http://localhost:3000/">
+            <input type="submit" value="Home" />
+        </form>
+
+    </div>
+
+</body>

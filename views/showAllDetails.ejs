@@ -1,0 +1,63 @@
+<style>
+    .content {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+
+    th,
+    td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        padding: 16px 32px;
+    }
+</style>
+
+<body>
+    <div class="content">
+        <h2>City Details Page</h2>
+        <br>
+        
+        <!-- create table -->
+        <table>
+            <tr>
+                <th>City Code</th>
+                <th>Country Code</th>
+                <th>City Name</th>
+                <th>Population</th>
+                <th>Is Coastal</th>
+                <th>Area (KM)</th>
+                <th>Country Name</th> <!-- new -->
+            </tr>
+            <% displayDetails(city) => { %>
+            <tr>
+                <td> <%= city.cty_code %> </td>
+                <td> <%= city.co_code %> </td>
+                <td> <%= city.cty_name %> </td>
+                <td> <%= city.population %> </td>
+                <td> <%= city.isCoastal %> </td>
+                <td> <%= city.areaKM %> </td>
+                <td> <%= city.co_name %> </td> <!-- new -->
+            </tr>
+            <% }) %>
+        </table>
+
+        <br><br>
+
+        <!-- home button -->
+        <form action="http://localhost:3000/">
+            <input type="submit" value="Home" />
+        </form>
+
+    </div>
+
+</body>

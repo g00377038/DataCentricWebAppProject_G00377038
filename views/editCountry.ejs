@@ -1,0 +1,30 @@
+<html>
+    <body>
+
+        <h2>Edit Country</h2>
+
+        <form action="/AddCountry" method = "POST"> <!--need to change-->
+        
+        <!-- Country Code text box -->
+        <label>Country Code: </label> <br>
+        <input type="text" name="countryCode"> <br>
+
+        <!-- Country Name text box -->
+        <label>Country Name: </label> <br>
+        <input type="text" name="countryName"> <br>
+
+        <!-- Country Details text box -->
+        <label>Country Details: </label> <br>
+        <input type="text" name="countryDetails"> <br><br>
+
+        <!-- Submit button -->
+        <input type="submit" value="Update">
+        </form>
+
+        <!-- home button -->
+        <form action="http://localhost:3000/">
+            <input type="submit" value="Home" />
+        </form>
+
+    </body>
+</html>

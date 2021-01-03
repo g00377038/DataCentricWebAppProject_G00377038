@@ -1,0 +1,67 @@
+<style>
+    .content {
+        max-width: 500px;
+        margin: auto;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        width: 500px;
+    }
+
+    th,
+    td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        padding: 16px 32px;
+    }
+</style>
+
+<body>
+
+    <div class="content">
+        <h2>List Heads of State Page</h2>
+        <br>
+        <!-- create table -->
+        <table>
+            <tr>
+                <th>Country ID</th>
+                <th>Head of State</th>
+            </tr>
+            <% headsOfState.forEach((head) => { %>
+                <tr>
+                    <td> <%= head._id %> </td>
+                    <td> <%= head.headOfState %> </td>
+
+                    <!-- Delete button -->
+                    <td> <form action=<%= "http://localhost:3000/ListHeadsOfState/" +head._id %> >
+                        <input type="submit" value="Delete" />
+                    </form> </td>
+
+                    
+
+                </tr>
+            <% }) %>
+        </table>
+
+        <br><br>
+
+        <!-- Add Head of State button -->
+        <form action="http://localhost:3000/addHeadOfState">
+            <input type="submit" value="Add New Head of State" />
+        </form>
+
+        <!-- home button -->
+        <form action="http://localhost:3000/">
+            <input type="submit" value="Home" />
+        </form>
+
+    </div>
+
+</body>
